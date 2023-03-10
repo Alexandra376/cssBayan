@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(228, 153, 32);
+    font-family: 'Rampart One', cursive;
+}
+.header_wrap {
+    justify-content: center;
+    display: flex;
+}
+.table_of_contents {
+    font-size: 3.4375rem;
+}
+.text {
+    font-size: 1.875rem;
+}
+.pic {
+    display: none;
+}
+.text {
+    cursor: pointer;
+    padding: 0.3125rem 0.3125rem;
+    transition: background .2s ease-out;
+    margin-bottom: 0.1875rem;
+    display: flex;
+    justify-content: center;
+}
+.text:hover {
+    background-color:#56bd58;
+    border-radius: 1.25rem;
+}
+.main_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_main_wrap {
+    cursor: pointer;
+}
+.main_main_wrap:hover {
+    color:rgb(67, 43, 226);
+}
+.main_text {
+    border-bottom: 0.0938rem solid rgb(42, 37, 3);
+}
+.text_input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    display: none;
+}
+.text_input:checked ~ .pic {
+    display: block;
+}
+.text_input:checked ~ .text {
+    color:rgb(67, 43, 226);
+}

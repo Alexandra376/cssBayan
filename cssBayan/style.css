@@ -21,7 +21,7 @@ body {
     transition: background .2s ease-out;
     margin-bottom: 0.1875rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .text:hover {
     background-color:#56bd58;
@@ -41,15 +41,37 @@ body {
 .main_text {
     border-bottom: 0.0938rem solid rgb(42, 37, 3);
 }
+.text_input:checked ~ .text {
+    color:rgb(67, 43, 226);
+}
+.text_input:checked ~ .pic {
+    display: block;
+}
 .text_input {
+    position: absolute;
+	cursor: pointer;
+    appearance: none;
+}
+label {
+    display: flex;
+    align-items: center;
+    gap: 170px;
+}
+.text_input:checked + .text .fa-sharp {
+    transform: rotate(135deg);
+    transition: all 0.4s;
+}
+
+
+
+/*.text_input {
     width: 0;
     height: 0;
     appearance: none;
     display: none;
 }
-.text_input:checked ~ .pic {
-    display: block;
-}
-.text_input:checked ~ .text {
-    color:rgb(67, 43, 226);
-}
+
+
+
+
+

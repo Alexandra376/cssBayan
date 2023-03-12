@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(228, 153, 32);
+    font-family: 'Rampart One', cursive;
+}
+.main_main_wrap {
+    padding: 1.25rem;
+}
+.header_wrap {
+    justify-content: center;
+    display: flex;
+}
+.table_of_contents {
+    font-size: 5.5vw;
+}
+.pic {
+    width: 100%;
+    max-height: 0;
+    cursor: pointer;  
+    padding: 1rem 0;
+    transition: 1.10s;
+}
+.text {
+    cursor: pointer;
+    padding: 0.3125rem 0.3125rem;
+    transition: background 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5vw;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 9.375rem;
+}
+.main_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_main_wrap {
+    cursor: pointer;
+}
+.main_text {
+    border-bottom: 0.0938rem solid rgb(42, 37, 3);
+}
+.text_input:checked ~ .text {
+    color:rgb(67, 43, 226);
+}
+.text_input:checked ~ .text .pic {
+    max-height: 30vw;
+    transform: rotate(360deg);
+}
+.text_input {
+	cursor: pointer;
+    appearance: none;
+    width: 0;
+    height: 0;
+    display: none;
+}
+.text_input:checked + .text .fa-sharp {
+    transform: rotate(135deg);
+    transition: 500ms ease;
+}
+label:active > .pic {
+ opacity: 0.6;
+}
+label:active > .content > .title {
+    color: black;
+}
+
+@media (hover: hover) {
+    .main_main_wrap:hover {
+        color:rgb(67, 43, 226);
+    }
+    .main_text:hover > .text .pic {
+        /* max-width: 30vw; */
+        max-height: 30vw;
+        transform: rotate(360deg);
+    }
+    .main_text:hover > .text > .content > .icon > .fa-sharp {
+        transform: rotate(135deg);
+        transition: all 0.4s;
+    }
+}
+    
+
+
+
+
+
+
+

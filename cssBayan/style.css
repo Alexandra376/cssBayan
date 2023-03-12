@@ -21,7 +21,8 @@ body {
     width: 100%;
     max-height: 0;
     cursor: pointer;  
-    padding: 0.3125rem 0;
+    padding: 1rem 0;
+    transition: 1.10s;
 }
 .text {
     cursor: pointer;
@@ -51,8 +52,6 @@ body {
     color:rgb(67, 43, 226);
 }
 .text_input:checked ~ .text .pic {
-    transition: 1.10s;
-    transform: rotate(360deg);
     max-width: 30vw;
     max-height: 30vw;
 }
@@ -79,8 +78,6 @@ label:active > .content > .title {
         color:rgb(67, 43, 226);
     }
     .main_text:hover > .text .pic {
-        transition: 1.10s;
-        transform: rotate(360deg);
         max-width: 30vw;
         max-height: 30vw;
     }
